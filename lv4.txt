@@ -8,7 +8,7 @@ puno bolje aprokismira podatke sa treniranim i testiranim , dobro prati podatke 
 
 3.zad
 
-za degree 2 aprokismira sa dosta slabom docnoöcu 
+za degree 2 aprokismira sa dosta slabom docno≈°cu 
 degree 6 jako dobro slici pocetno danoj funkciji no podatke malo fali da ih super opisuje
 degree 15 najbolje opisuje podatke odnosno odlicno se iztrenira
 
@@ -17,7 +17,7 @@ a) 6699 dataset
 b) dtypes: float64(3), int64(4), object(5)
 c) najmanju Maruti 800 AC   , najvecu BMW X7 xDrive 30d DPE
 d) 575 auta je 2012 godine
-e) Maruti Eeco 5 STR With AC Plus HTR CNG najmanje kilometara vozio , najviöe kilometara vozio 
+e) Maruti Eeco 5 STR With AC Plus HTR CNG najmanje kilometara vozio , najvi≈°e kilometara vozio 
 f)5 sjedal iscitano iz grafa
 g)km_driven    88039.972344 diesel , km_driven    54101.88281 petrol
 
