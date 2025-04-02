@@ -1,0 +1,20 @@
+1.
+a)na nizim temperaturama i nizem CO2 se pretpostavlja vise da je slobodna soba,
+ no pri visim temperaturama i vecem CO2 nekako prevladava da je soba zauzeta.
+na visim CO2 imamo vise pretpostavke da je soba zauzeta što je logično jer osobe ispuštaju CO2.
+
+b) učitani skup sadrži 10129 redova i 3  odnosno 10129 podataka.
+c)logistička razdioba podataka.
+
+2.
+
+
+
+3. 
+a) vizualizirano 
+b) mjenjajući max_depth nam mjenja koliko stablo pomaka prema dole moze napraviti , odnosno odredimo li max-depth = 1
+samo ce se jednom pomaknuti/podjeliti prema dole , povecamo li na max_depth = 10 moze se podjeliti 10 puta dolje.
+c)
+
+
+4.
