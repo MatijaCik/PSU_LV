@@ -10,27 +10,39 @@ c. izračunajte preciznost i odziv po klasama
 e) Što se događa s rezultatima ako se koristi veći odnosno manji broj susjeda?
 f) Što se događa s rezultatima ako ne koristite skaliranje ulaznih veličina?'''
 
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
 from sklearn.model_selection import train_test_split
-
-# ucitaj podatke za ucenje
-df = pd.read_csv('C:\\Users\\student\\Desktop\\lV5\\occupancy_processed.csv')
-
-feature_names = ['S3_Temp', 'S5_CO2']
-target_name = 'Room_Occupancy_Count'
-class_names = ['Slobodna', 'Zauzeta']
-
-X = df[feature_names].to_numpy()
-y = df[target_name].to_numpy()
-
-plt.figure()
-for class_value in np.unique(y):
-    mask = y == class_value
-    plt.scatter(X[mask, 0], X[mask, 1], label=class_names[class_value])
-    
-x_train, x_test, y_train, y_test =train_test_split(df, test_size=0.2, train_size=0.8, random_state=None, shuffle=True, stratify=y)
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix, classification_report, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
 
 
-print(x_train)
+data = pd.read_csv('occupancy_processed.csv')
+
+X = data[['Temperature', 'CO2']].values
+y = data['Occupancy'].values
+
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
+
+
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X_train, y_train)
+
+
+y_pred = knn.predict(X_test)
+
+
+confuzio = confusion_matrix(y_test, y_pred)
+ConfusionMatrixDisplay(confuzion).plot()
+plt.show()
+
+
+print(classification_report(y_test, y_pred))
