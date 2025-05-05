@@ -1,0 +1,5 @@
+tokom treniranja nasumicno ugasi neurone , tokom testiranja ne gasi odnosno dropout sloj ne radi nista .
+tokom testiranja samo prosljeduje dropoutsloj
+padding "valid" znaci da nece bit sam
+ulaz 48x48xX ako je 3 filtra onda ce biti 46x46xX , i max pulling 23x23xX ?????
+
